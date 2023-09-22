@@ -22,3 +22,6 @@ init: ## Initialize terraform
 
 script:	## Run the script
 	@bash ./run_script.sh
+
+params: ## handle params
+	@echo "TF formatting $(arg1)"
