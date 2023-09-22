@@ -16,3 +16,9 @@ terraform-fmt: ## More items
 restart-frontend: ## Restart the frontend and admin apps in dev
 	@make terraform-fmt && make install
 	@echo "Frontend app restarted"
+
+init: ## Initialize terraform
+	terraform init
+
+script:	## Run the script
+	@bash ./run_script.sh
