@@ -26,8 +26,8 @@ script:	## Run the script
 	@bash ./run_script.sh
 
 params: ## handle params
-	@echo "TF formatting $(arg1)"
+	@echo "Running params $(arg1)"
 
 sbx1: ## handle param editing
 	$(eval env=sbx1)
-	@echo "TF formatting $(env)"
+	@echo "Edited formatting $(env)"
