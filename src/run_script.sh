@@ -14,6 +14,9 @@ set -e
 
 echo "Running script"
 
+provider=$1
+env=$2
+
 if [ -z "${provider}" ]; then
     echo "'provider' variable must be set"
     exit
@@ -23,3 +26,6 @@ if [ -z "${env}" ]; then
     echo "'env' variable must be set"
     exit
 fi
+
+echo "provider: ${provider}" and "env: ${env}"
+echo "Script completed"

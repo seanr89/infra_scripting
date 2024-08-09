@@ -23,7 +23,7 @@ init: ## Initialize terraform
 	terraform init
 
 script:	## Run the script
-	@bash ./run_script.sh
+	@bash ./run_script.sh provider-test sbx-env
 
 params: ## handle params
 	@echo "Running params $(arg1)"
