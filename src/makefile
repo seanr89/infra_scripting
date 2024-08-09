@@ -23,7 +23,7 @@ init: ## Initialize terraform
 	terraform init
 
 script:	## Run the script
-	@bash ./run_script.sh provider-test sbx-env
+	@bash ./run_script.sh provider-test $(env)
 
 params: ## handle params
 	@echo "Running params $(arg1)"
@@ -31,3 +31,7 @@ params: ## handle params
 sbx1: ## handle param editing
 	$(eval env=sbx1)
 	@echo "Edited formatting $(env)"
+	@bash ./run_script.sh provider-test $(env)
+
+batched: sbx1
+	echo batched
